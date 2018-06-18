@@ -1,3 +1,4 @@
 # Created by .ignore support plugin (hsz.mobi)
 package-lock.json
 node_modules
+dist
