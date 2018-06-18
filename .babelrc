@@ -8,8 +8,6 @@
       ],
       [ "react",
         {
-          "modules": false,
-          "useBuiltIns": "usage"
         }
       ]
   ],
