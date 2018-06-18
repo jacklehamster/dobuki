@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "node ./dist/src/server.js",
-    "build": "babel src/*.js -d dist"
+    "build": "babel src/*.js -d dist --presets=es2015"
   },
   "repository": {
     "type": "git",
