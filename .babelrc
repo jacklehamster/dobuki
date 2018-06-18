@@ -5,8 +5,7 @@
               "modules": false,
               "useBuiltIns": "usage"
           }
-      ],
-      "react"
+      ]
   ],
   "env": {
       "test": {

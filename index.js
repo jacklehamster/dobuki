@@ -1,4 +1,4 @@
 require( "babel-register" )( {
-    presets: [ ['babel-register', "env"] ],
+    presets: [ "env" ],
 } );
 require( "./src/server" );
