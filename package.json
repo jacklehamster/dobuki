@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
-    "build": "babel src -d dist",
     "heroku-postbuild": "npm install"
   },
   "repository": {
@@ -25,8 +24,10 @@
     "react-dom": "^16.4.1"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
     "nodemon": "^1.17.5"
   }
 }

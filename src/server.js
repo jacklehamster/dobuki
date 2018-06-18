@@ -16,13 +16,6 @@ app.get( "/*", ( req, res ) => {
     res.send(reactDom);
 } );
 
-
-
-
-
-
-
-
 app.listen(PORT, () => {
     console.log('Platform: ' + process.platform);
     console.log('listen: ' + PORT);
