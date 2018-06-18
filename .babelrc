@@ -5,6 +5,12 @@
               "modules": false,
               "useBuiltIns": "usage"
           }
+      ],
+      [ "react",
+        {
+          "modules": false,
+          "useBuiltIns": "usage"
+        }
       ]
   ],
   "env": {
