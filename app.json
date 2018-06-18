@@ -1,6 +1,7 @@
 {
   "name": "dobuki",
   "scripts": {
+    "start": "npm run server"
   },
   "env": {
   },
