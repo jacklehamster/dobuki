@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon index.js"
+    "server": "nodemon index.js",
+    "heroku-postbuild": "npm install",
+    "start": "babel-node index.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,7 @@
     "react-dom": "^16.4.1"
   },
   "devDependencies": {
+    "babel": "6.23.0",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "nodemon": "^1.17.5"
