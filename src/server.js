@@ -37,18 +37,17 @@ app.listen(port, () => {
 });
 
 
-function htmlTemplate( reactDom, reduxState, helmetData ) {
+function htmlTemplate( reactDom, reduxState, helmet ) {
     return `
         <!DOCTYPE html>
-        <html>
+        <html ${helmet.htmlAttributes.toString( ) }>
         <head>
-            <meta charset="utf-8">
-            ${ helmetData.title.toString( ) }
-            ${ helmetData.meta.toString( ) }
-            <title>React SSR</title>
+            ${ helmet.title.toString( ) }
+            ${ helmet.meta.toString( ) }
+            ${ helmet.link.toString() }
         </head>
         
-        <body>
+        <body ${helmet.bodyAttributes.toString()}>
             <div id="app">${ reactDom }</div>
             <script>
                 window.REDUX_DATA = ${ JSON.stringify( reduxState ) }

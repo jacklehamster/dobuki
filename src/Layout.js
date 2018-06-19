@@ -2,6 +2,7 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import routes from "./routes";
 import Header from "./Header";
+import Helmet from "react-helmet";
 
 class Layout extends React.Component {
     constructor() {
@@ -14,6 +15,7 @@ class Layout extends React.Component {
     render() {
         return (
             <div>
+                <Helmet />
                 <h1>{ this.state.title }</h1>
                 <Header />
                 <Switch>
