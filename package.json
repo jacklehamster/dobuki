@@ -11,7 +11,7 @@
     "webpack": "webpack --config webpack.config.js",
     "build": "npm-run-all babel webpack",
     "begin": "npm-run-all build start",
-    "heroku-prebuild": "npm run build"
+    "heroku-prebuild": "npm install && npm run build"
   },
   "repository": {
     "type": "git",
