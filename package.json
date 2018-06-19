@@ -2,6 +2,9 @@
   "name": "dobuki",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "6.2.2"
+  },
   "scripts": {
     "start": "node ./dist/src/server.js",
     "babel": "babel src/*.js -d dist --presets=es2015,react",
