@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "node ./dist/src/server.js",
-    "build": "babel src/*.js -d dist --presets=babel-preset-env,babel-preset-react",
+    "build": "babel src/*.js -d dist --presets=env",
     "heroku-prebuild": "npm run build"
   },
   "repository": {
