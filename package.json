@@ -4,7 +4,10 @@
   "description": "",
   "scripts": {
     "start": "node ./dist/src/server.js",
-    "build": "babel src/*.js -d dist --presets es2015,react",
+    "babel": "babel src/*.js -d dist --presets es2015,react",
+    "webpack": "webpack --config webpack.config.js",
+    "build": "npm run babel && npm run webpack",
+    "begin": "npm run build && npm run start",
     "heroku-prebuild": "npm install && npm run build"
   },
   "repository": {
