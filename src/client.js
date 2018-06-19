@@ -10,7 +10,7 @@ const store = createStore( window.REDUX_DATA );
 const jsx = (
     <ReduxProvider store={ store }>
         <Router>
-            <div />
+            <Layout />
         </Router>
     </ReduxProvider>
 );
