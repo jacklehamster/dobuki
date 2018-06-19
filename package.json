@@ -4,8 +4,8 @@
   "description": "",
   "scripts": {
     "start": "node ./dist/src/server.js",
-    "build": "babel src/*.js -d dist --presets es2015",
-    "heroku-prebuild": "npm run build"
+    "build": "babel src/*.js -d dist --presets es2015,react",
+    "heroku-prebuild": "npm install && npm run build"
   },
   "repository": {
     "type": "git",
