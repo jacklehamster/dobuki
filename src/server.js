@@ -12,6 +12,7 @@ const port = process.env.PORT || 3000;
 
 app.use( express.static( path.resolve( __dirname, "../" ) ) );
 app.use( '/public', express.static( path.resolve( __dirname, "../../public") ) );
+app.use( '/assets', express.static( path.resolve( __dirname, "./assets") ) );
 
 app.get("/*", (req, res) => {
     const context = { };

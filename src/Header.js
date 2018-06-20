@@ -3,14 +3,13 @@ import { Link } from "react-router-dom";
 import Helmet from "react-helmet";
 import { connect } from "react-redux";
 import icon from "./assets/dobuki.png";
-import styles from "./assets/header.css";
 
 const Header = ( { loggedIn } ) => (
     <div>
         <Helmet>
             <link href="https://fonts.googleapis.com/css?family=Concert+One|Fredoka+One"
                   rel="stylesheet" media="none" onLoad="if(media!='all')media='all'" />
-
+            <link rel="stylesheet" href="./assets/header.css" />
         </Helmet>
         <HeaderTitle title="Dobuki.net" icon={icon} />
         <Link to="/">Home</Link>
@@ -56,7 +55,7 @@ class HeaderTitle extends React.Component {
         };
 
         return (<div>
-            <div style={divStyle} className={styles.header}>
+            <div style={divStyle} className="header">
                 <img style={imgStyle} src={this.props.icon} onClick={HeaderTitle.reloadPage}/>
                 <h1 style={h1Style} onClick={HeaderTitle.reloadPage}>{this.props.title}</h1>
             </div>
