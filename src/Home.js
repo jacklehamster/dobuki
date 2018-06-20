@@ -6,17 +6,19 @@ class Home extends React.Component {
     render( ) {
         return (
             <div>
-                Home
                 <Helmet>
                     <title>Home</title>
                 </Helmet>
+                <pre>
+                    { JSON.stringify(this.props.data, null, '\t') }
+                </pre>
             </div>
         );
     }
 }
 
 const mapStateToProps = ( state ) => ( {
-    circuits: state.data,
+    data: state.data,
 } );
 
 

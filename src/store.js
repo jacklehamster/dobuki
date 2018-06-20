@@ -18,7 +18,7 @@ const sessionReducer = ( state = false, action ) => {
     }
 };
 
-const dataReducer = ( state = [ ], action ) => {
+const dataReducer = ( state = {}, action ) => {
     switch ( action.type ) {
         case "STORE_DATA":
             return action.data;
