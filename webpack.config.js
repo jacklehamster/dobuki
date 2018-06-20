@@ -15,31 +15,41 @@ if ( !dev ) {
     } ) );
 }
 
-module.exports = {
-    mode: dev ? "development" : "production",
-    context: path.join( __dirname, "src" ),
-    devtool: dev ? "none" : "source-map",
-    entry: {
-        app: "client.js",
+module.exports = [
+    {
+        mode: dev ? "development" : "production",
+        context: path.join( __dirname, "src" ),
+        devtool: dev ? "none" : "source-map",
+        entry: {
+            app: "client.js",
+        },
+        resolve: {
+            modules: [
+                path.resolve( "./dist/src" ),
+                "node_modules",
+            ],
+        },
+        module: {
+            rules: [
+                {
+                    test: /\.jsx?$/,
+                    exclude: /(node_modules|bower_components)/,
+                    loader: "babel-loader",
+                },
+                {
+                    test: /\.(png|jpg|gif)$/,
+                    loader: 'file-loader',
+                },
+                {
+                    test: /\.css$/,
+                    use: [ 'style-loader', 'css-loader' ]
+                },
+            ],
+        },
+        output: {
+            path: path.resolve( __dirname, "dist" ),
+            filename: "[name].bundle.js",
+        },
+        plugins,
     },
-    resolve: {
-        modules: [
-            path.resolve( "./dist/src" ),
-            "node_modules",
-        ],
-    },
-    module: {
-        rules: [
-            {
-                test: /\.jsx?$/,
-                exclude: /(node_modules|bower_components)/,
-                loader: "babel-loader",
-            },
-        ],
-    },
-    output: {
-        path: path.resolve( __dirname, "dist" ),
-        filename: "[name].bundle.js",
-    },
-    plugins,
-};
+];

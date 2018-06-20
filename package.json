@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/jacklehamster/dobuki#readme",
   "dependencies": {
+    "babel-plugin-file-loader": "^1.0.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.24.1",
@@ -39,10 +40,15 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
+    "babel-plugin-css-modules-transform": "^1.6.1",
+    "css-loader": "^0.28.11",
     "express": "^4.16.3",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.11",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "nodemon": "^1.17.5",
     "redux-thunk": "^2.3.0",
+    "style-loader": "^0.21.0",
     "webpack": "^4.12.0",
     "webpack-bundle-analyzer": "^2.13.1",
     "webpack-cli": "^3.0.8"
