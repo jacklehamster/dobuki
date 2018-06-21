@@ -4,7 +4,7 @@ import Helmet from "react-helmet";
 import { connect } from "react-redux";
 import icon from "./assets/dobuki.png";
 
-const Header = ( { loggedIn } ) => (
+const Header = ( { sessionInitialized } ) => (
     <div>
         <Helmet>
             <link href="https://fonts.googleapis.com/css?family=Concert+One|Fredoka+One"
@@ -17,8 +17,8 @@ const Header = ( { loggedIn } ) => (
     </div>
 );
 
-const mapStateToProps = ( state ) => ( {
-    loggedIn: state.loggedIn,
+const mapStateToProps = ( { sessionInitialized } ) => ( {
+    sessionInitialized,
 } );
 
 export default connect( mapStateToProps )( Header );

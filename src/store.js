@@ -27,7 +27,7 @@ const dataReducer = ( state = {}, action ) => {
 };
 
 const reducer = combineReducers( {
-    loggedIn: sessionReducer,
+    sessionInitialized: sessionReducer,
     data: dataReducer,
 } );
 
