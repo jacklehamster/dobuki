@@ -13,7 +13,9 @@ const Header = ( { sessionInitialized } ) => (
         </Helmet>
         <HeaderTitle title="Dobuki.net" icon={icon} />
         <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
+        <Link to="/games">Games</Link>
+        <Link to="/videos">Videos</Link>
+        <Link to="/projects">Project</Link>
     </div>
 );
 

@@ -1,5 +1,7 @@
 import Home from "./Home";
-import About from "./About";
+import GamesPage from "./GamesPage";
+import VideosPage from "./VideosPage";
+import ProjectsPage from "./ProjectsPage";
 
 export default [
     {
@@ -8,8 +10,18 @@ export default [
         exact: true,
     },
     {
-        path: "/about",
-        component: About,
+        path: "/games",
+        component: GamesPage,
+        exact: true,
+    },
+    {
+        path: "/videos",
+        component: VideosPage,
+        exact: true,
+    },
+    {
+        path: "/projects",
+        component: ProjectsPage,
         exact: true,
     },
 ];
