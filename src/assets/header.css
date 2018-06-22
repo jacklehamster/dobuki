@@ -1,3 +1,11 @@
+body {
+    min-height: 100vh;
+    background: #F4F6F7;
+    background: linear-gradient(#F4F6F7, white);
+    margin: 0;
+    padding: 0;
+}
+
 .header {
     display: flex;
     flex-direction: row;
