@@ -100,7 +100,7 @@ class Api {
 
     youtube(callback) {
         this.performCall(
-            'GET', 'https://youtube-vlog.herokuapp.com/', {
+            'GET', 'https://vlog-api.herokuapp.com/youtube', {
             }, callback);
     }
 }
