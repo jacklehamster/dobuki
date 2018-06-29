@@ -1,21 +1,32 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Helmet from "react-helmet";
 import { connect } from "react-redux";
-import icon from "./assets/dobuki.png";
+import icon from "./public/assets/dobuki.png";
+import NavigatorWithRouter from "./Navigator";
 
 const Header = ( { sessionInitialized } ) => (
     <div>
         <Helmet>
             <link href="https://fonts.googleapis.com/css?family=Concert+One|Fredoka+One"
                   rel="stylesheet" media="none" onLoad="if(media!='all')media='all'" />
-            <link rel="stylesheet" href="./assets/header.css" />
+            <link rel="stylesheet" href="/assets/header.css" />
         </Helmet>
         <HeaderTitle title="Dobuki.net" icon={icon} />
-        <Link to="/">Home</Link>
-        <Link to="/games">Games</Link>
-        <Link to="/videos">Videos</Link>
-        <Link to="/projects">Project</Link>
+        <NavigatorWithRouter links={[
+            {
+                label: 'Home',
+                url: '/',
+            }, {
+                label: 'Games',
+                url: '/games',
+            }, {
+                label: 'Videos',
+                url: '/videos',
+            }, {
+                label: 'Projects',
+                url: '/projects',
+            },
+        ]} />
     </div>
 );
 
