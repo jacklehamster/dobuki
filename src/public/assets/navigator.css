@@ -1,0 +1,15 @@
+.tab {
+    margin: 5px 3px;
+    padding: 3px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #000;
+    text-decoration: none;
+}
+
+.tab.selected {
+    color: #fbe9e7;
+    background-color: #cf4944;
+    cursor: default;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello</title>
+    <script src="main.js"></script>
+    <script id="vertexShader" type="x-shader/x-vertex">
+attribute vec4 a_position;
+attribute vec2 a_texcoord;
+
+uniform mat4 u_matrix;
+
+varying vec2 v_texcoord;
+
+void main() {
+   gl_Position = u_matrix * a_position;
+   v_texcoord = a_texcoord;
+}
+    </script>
+    <script id="fragmentShader" type="x-shader/x-fragment">
+precision mediump float;
+
+varying vec2 v_texcoord;
+
+uniform sampler2D u_texture;
+
+void main() {
+   gl_FragColor = texture2D(u_texture, v_texcoord);
+}
+    </script>
+    <script src="https://webglfundamentals.org/webgl/resources/webgl-utils.js"></script>
+    <script src="https://webglfundamentals.org/webgl/resources/webgl-lessons-helper.js"></script>
+    <!-- you can and should delete this script. it is only used on the site to help with errors -->
+    <script src="https://webglfundamentals.org/webgl/resources/m4.js"></script>
+</head>
+<body style="margin: 0">
+    Hello WebGL!
+    <canvas id="canvas" style="width: 512px; height: 512px" width="1024" height="1024"></canvas>
+</body>
+</html>

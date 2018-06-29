@@ -1,0 +1,19 @@
+{
+	"fps": 40,
+	"elements": [
+		{
+			"position": [
+				323.6,
+				282.2
+			],
+			"name": "bestiole1",
+			"frame": 1,
+			"type": "bestiole"
+		}
+	],
+	"backgroundColor": "#ccffcc",
+	"size": [
+		600,
+		450
+	]
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello</title>
+    <script src="main.js"></script>
+    <script id="vertexShader" type="x-shader/x-vertex">
+#version 300 es
+in vec3 position;
+in vec2 textureCoordinate;
+in vec4 color;
+
+out vec2 ftextureCoordinate;
+out vec4 fcolor;
+
+uniform mat4 modelMatrix;
+uniform mat4 viewMatrix;
+uniform mat4 projectionMatrix;
+
+void main() {
+    gl_Position = projectionMatrix*viewMatrix*modelMatrix*vec4(position.x,position.yz, 1);
+    ftextureCoordinate = textureCoordinate;
+    fcolor = color;
+}
+    </script>
+    <script id="fragmentShader" type="x-shader/x-fragment">
+#version 300 es
+precision mediump float;
+in vec2 ftextureCoordinate;
+uniform sampler2D sampler0;
+uniform sampler2D sampler1;
+in vec4 fcolor;
+out vec4 finalColor;
+
+void main() {
+    finalColor = mix(
+        texture(sampler0, ftextureCoordinate),
+        texture(sampler1, ftextureCoordinate),
+        .4
+    ) * fcolor;
+}
+    </script>
+    <script src="glMatrix-0.9.5.max.js"></script>
+</head>
+<body style="margin: 0; text-align: center;">
+    <div style="width: 100%" id="status">Hello WebGL!</div>
+    <canvas id="canvas" style="width: 100vw; height: calc(100vw * 480/640)" width="1280" height="960"></canvas>
+</body>
+</html>

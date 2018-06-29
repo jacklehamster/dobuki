@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello</title>
+    <script src="main.js"></script>
+    <script id="vertexShader" type="x-shader/x-vertex">
+#version 300 es
+in vec3 position;
+//in vec4 color;
+out vec4 fcolor;
+
+uniform vec4 colorsUniformArray[3];
+uniform vec3 offsets;
+
+uniform mat4 modelMatrix;
+uniform mat4 viewMatrix;
+uniform mat4 projectionMatrix;
+
+void main() {
+    gl_Position = projectionMatrix*viewMatrix*modelMatrix*
+        vec4(position.x + offsets[gl_InstanceID],position.yz, 1);
+//    fcolor = color;
+    fcolor = colorsUniformArray[gl_InstanceID];
+}
+    </script>
+    <script id="fragmentShader" type="x-shader/x-fragment">
+#version 300 es
+precision mediump float;
+in vec4 fcolor;
+out vec4 finalColor;
+
+void main() {
+    finalColor = fcolor;
+}
+    </script>
+    <script src="glMatrix-0.9.5.max.js"></script>
+</head>
+<body style="margin: 0; text-align: center;">
+    <div style="width: 100%" id="status">Hello WebGL!</div>
+    <canvas id="canvas" style="width: 800px; height: 600px" width="1600" height="1200"></canvas>
+</body>
+</html>
