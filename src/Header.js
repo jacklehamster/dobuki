@@ -1,7 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { connect } from "react-redux";
-import icon from "./public/assets/dobuki.png";
+import icon from "public/assets/dobuki.png";
 import NavigatorWithRouter from "./Navigator";
 
 const Header = ( { sessionInitialized } ) => (
