@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/jacklehamster/dobuki#readme",
   "dependencies": {
+    "babel": "^6.23.0",
     "babel-plugin-css-modules-transform": "^1.6.1",
     "babel-plugin-file-loader": "^1.0.0",
     "babel-preset-env": "^1.7.0",
